@@ -165,6 +165,11 @@ SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_VARS=		GN_ARGS+=use_sndio=true
 SNDIO_VARS_OFF=		GN_ARGS+=use_sndio=false
 
+# Make better javascript with java
+JAVA_BUILD=	yes
+JAVA_VERSION=	1.8
+USE_JAVA=	yes
+
 # Allow relocations against read-only segments (override lld default)
 LDFLAGS_i386=	-Wl,-znotext
 
@@ -210,6 +215,10 @@ do-configure:
 	# Setup nodejs dependency
 	@${MKDIR} ${WRKSRC}/third_party/node/freebsd/node-freebsd-x64/bin
 	${LN} -sf ${LOCALBASE}/bin/node ${WRKSRC}/third_party/node/freebsd/node-freebsd-x64/bin/node
+
+	# Setup java dependency
+	@${MKDIR} ${WRKDIR}/bin
+	${LN} -sf ${LOCALBASE}/openjdk8/bin/java ${WRKDIR}/bin/java
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${DATADIR}

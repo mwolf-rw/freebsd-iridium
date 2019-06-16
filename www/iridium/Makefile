@@ -98,7 +98,6 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		use_custom_libcxx=false \
 		use_gnome_keyring=false \
 		use_jumbo_build=true \
-		use_gtk3=true \
 		use_lld=true \
 		use_sysroot=false \
 		use_system_freetype=true \
@@ -108,7 +107,7 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 		extra_ldflags="${LDFLAGS}"
 # TODO: investigate building with these options:
 # use_system_minigbm
-GN_BOOTSTRAP_FLAGS=	--no-clean --no-rebuild
+GN_BOOTSTRAP_FLAGS=	--no-clean --no-rebuild --skip-generate-buildfiles
 
 SUB_FILES=	iridium-browser.desktop iridium pkg-message
 SUB_LIST+=	COMMENT="${COMMENT}"

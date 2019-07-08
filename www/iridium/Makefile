@@ -109,7 +109,7 @@ GN_ARGS+=	clang_use_chrome_plugins=false \
 # use_system_minigbm
 GN_BOOTSTRAP_FLAGS=	--no-clean --no-rebuild --skip-generate-buildfiles
 
-SUB_FILES=	iridium-browser.desktop iridium pkg-message
+SUB_FILES=	iridium-browser.desktop iridium
 SUB_LIST+=	COMMENT="${COMMENT}"
 
 OPTIONS_DEFINE=	CODECS CUPS DEBUG KERBEROS

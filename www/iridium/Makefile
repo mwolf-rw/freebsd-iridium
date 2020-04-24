@@ -62,7 +62,7 @@ RUN_DEPENDS=	xdg-open:devel/xdg-utils \
 
 ONLY_FOR_ARCHS=	amd64 i386
 
-USES=		bison cpe desktop-file-utils gl gnome jpeg localbase:ldflags \
+USES=		bison cpe desktop-file-utils dos2unix gl gnome jpeg localbase:ldflags \
 		ninja perl5 pkgconfig python:2.7,build shebangfix tar:xz xorg
 USE_GL=		gl
 USE_LDCONFIG=	${DATADIR}
@@ -72,6 +72,7 @@ USE_XORG=	x11 xcb xcomposite xcursor xext xdamage xfixes xi \
 USE_GNOME=	atk dconf glib20 gtk30 libxml2 libxslt
 MAKE_ARGS=	-C out/${BUILDTYPE}
 BINARY_ALIAS=	python=${PYTHON_CMD}
+DOS2UNIX_FILES=	third_party/skia/third_party/vulkanmemoryallocator/include/vk_mem_alloc.h
 ALL_TARGET=	chrome
 INSTALLS_ICONS=	yes
 

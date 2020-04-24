@@ -1,6 +1,6 @@
---- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2020-03-16 18:40:29 UTC
+--- chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc.orig	2020-04-10 00:39:09 UTC
 +++ chrome/browser/safe_browsing/incident_reporting/incident_reporting_service.cc
-@@ -671,7 +671,7 @@ void IncidentReportingService::OnEnvironmentDataCollec
+@@ -674,7 +674,7 @@ void IncidentReportingService::OnEnvironmentDataCollec
    environment_collection_pending_ = false;
  
  // Process::Current().CreationTime() is missing on some platforms.

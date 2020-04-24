@@ -1,4 +1,4 @@
---- chrome/browser/flag_descriptions.h.orig	2020-04-03 04:11:29 UTC
+--- chrome/browser/flag_descriptions.h.orig	2020-04-10 00:39:02 UTC
 +++ chrome/browser/flag_descriptions.h
 @@ -21,9 +21,9 @@
  #include "ui/android/buildflags.h"
@@ -12,7 +12,7 @@
  
  // This file declares strings used in chrome://flags. These messages are not
  // translated, because instead of end-users they target Chromium developers and
-@@ -2128,14 +2128,14 @@ extern const char kZeroStateFilesDescription[];
+@@ -2132,14 +2132,14 @@ extern const char kZeroStateFilesDescription[];
  
  #endif  // #if defined(OS_CHROMEOS)
  
@@ -29,7 +29,7 @@
  
  // All views-based platforms --------------------------------------------------
  
-@@ -2154,12 +2154,12 @@ extern const char kReopenTabInProductHelpDescription[]
+@@ -2158,12 +2158,12 @@ extern const char kReopenTabInProductHelpDescription[]
  
  // Random platform combinations -----------------------------------------------
  
@@ -44,7 +44,7 @@
  
  #if BUILDFLAG(ENABLE_CLICK_TO_CALL)
  
-@@ -2171,21 +2171,21 @@ extern const char kClickToCallDetectionV2Description[]
+@@ -2175,21 +2175,21 @@ extern const char kClickToCallDetectionV2Description[]
  
  #endif  // BUILDFLAG(ENABLE_CLICK_TO_CALL)
  

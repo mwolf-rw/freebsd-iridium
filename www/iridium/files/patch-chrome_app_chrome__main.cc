@@ -1,6 +1,6 @@
---- chrome/app/chrome_main.cc.orig	2019-09-09 21:55:07 UTC
+--- chrome/app/chrome_main.cc.orig	2020-04-10 00:39:09 UTC
 +++ chrome/app/chrome_main.cc
-@@ -101,11 +101,11 @@ int ChromeMain(int argc, const char** argv) {
+@@ -118,11 +118,11 @@ int ChromeMain(int argc, const char** argv) {
    MainThreadStackSamplingProfiler scoped_sampling_profiler;
  
    // Chrome-specific process modes.
@@ -12,5 +12,5 @@
 -#endif  // defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_WIN)
 +#endif  // defined(OS_LINUX) || defined(OS_MACOSX) || defined(OS_WIN) || defined(OS_BSD)
  
-   int rv = content::ContentMain(params);
- 
+ #if !defined(CHROME_MULTIPLE_DLL_CHILD)
+   net::trace_urlreq_cb = &trace_url_request;
